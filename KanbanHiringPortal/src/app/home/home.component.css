@@ -1,0 +1,50 @@
+body
+{
+
+    background-image: url("src\assets\wd.png");
+    background-size: 40cm;}
+
+
+    a{
+
+        border: none;
+    
+        outline: none;
+    
+        height: 40px;
+    
+        width: 100px;
+    
+        background-color:white;
+    
+        color: #45beaa;
+    
+        border-radius: 4px;
+    
+        font-weight: bold;
+    
+    }
+    
+    
+    
+    a:hover{
+    
+        background-color:#45BEAA ;
+    
+        border:1px solid;
+    
+        color :white;
+    
+    }
+
+
+    h1{
+
+      color:whitesmoke;
+      size: 50%;
+      font-family: Arial, Helvetica, sans-serif
+
+    }
+
+
+    
