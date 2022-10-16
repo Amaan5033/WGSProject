@@ -1,0 +1,92 @@
+
+<div class="example-container" style="width:350px ;padding-left:70px;">
+    <h2>BackLog</h2>
+    <div  style= "max-height: 600px;  overflow-y: auto;" divid="#divId" name="mydiv"
+      cdkDropList
+      #backlg="cdkDropList"
+      [cdkDropListData]="backlog"
+      [cdkDropListConnectedTo]="[inprogress,inreview,doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div id="modalId" class="example-box" *ngFor="let item of backlog;let indexofEle=index" cdkDrag (click)="display(item)">
+        <table>
+         <tr><td>{{item.candidateId}}</td></tr>
+          <tr><td>{{item.candidateName}}</td></tr>
+          <tr><td>Loc- {{item.location}}</td></tr>
+          <tr><td>LWD- {{item.expectedLwd}}</td></tr>
+          <tr><td>Rel Exp- {{item.relevantExperiance}}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="example-container" style="width:350px ;padding-left:70px;">
+    <h2>In Progress</h2>
+  
+    <div style= "max-height: 600px;  overflow-y: auto;"
+      cdkDropList
+      #inprogress="cdkDropList"
+      [cdkDropListData]="inProgress"
+      [cdkDropListConnectedTo]="[inreview,backlg,doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of inProgress" cdkDrag (click)="display(item)">
+        <table>
+          <tr><td>{{item.candidateId}}</td></tr>
+           <tr><td>{{item.candidateName}}</td></tr>
+           <tr><td>Loc- {{item.location}}</td></tr>
+           <tr><td>LWD- {{item.expectedLwd}}</td></tr>
+           <tr><td>Rel Exp- {{item.relevantExperiance}}</td></tr>
+ 
+         </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container" style="width:350px ;padding-left:70px;">
+    <h2>In Review</h2>
+  
+    <div style= "max-height: 600px; overflow-y: auto;"
+      cdkDropList
+      #inreview="cdkDropList"
+      [cdkDropListData]="inReview"
+      [cdkDropListConnectedTo]="[doneList,backlg,inprogress]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of inReview" cdkDrag (click)="display(item)">
+        <table>
+          <tr><td>{{item.candidateId}}</td></tr>
+           <tr><td>{{item.candidateName}}</td></tr>
+           <tr><td>Loc- {{item.location}}</td></tr>
+           <tr><td>LWD- {{item.expectedLwd}}</td></tr>
+           <tr><td>Rel Exp- {{item.relevantExperiance}}</td></tr>
+ 
+         </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container" style="width:350px ;padding-left:70px;">
+    <h2>Done</h2>
+  
+    <div style= "max-height: 600px;  overflow-y: auto;"
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[backlg,inprogress,inreview]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag (click)="display(item)">
+        <table>
+          <tr><td>{{item.candidateId}}</td></tr>
+           <tr><td>{{item.candidateName}}</td></tr>
+           <tr><td>Loc- {{item.location}}</td></tr>
+           <tr><td>LWD- {{item.expectedLwd}}</td></tr>
+           <tr><td>Rel Exp- {{item.relevantExperiance}}</td></tr>
+ 
+         </table>
+      </div>
+    </div>
+  </div>
+
+
