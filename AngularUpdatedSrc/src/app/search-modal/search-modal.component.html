@@ -1,0 +1,50 @@
+<p>search-modal works!</p>
+
+<button class="btn btn-info" type="button" (click)="exportCsv()">Export CSV</button>
+
+<div id="container">
+    <table *ngFor="let item of searchData" style="width:100%">
+        <tr>
+            <td>{{item.candidateId}}</td>
+            <td>{{item.candidateName}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.expectedLwd}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.maritialStatus}}</td>
+            <td>{{item.relevantExperiance}}</td>
+            <td>{{item.skills}}</td>
+            <td>{{item.technology}}</td>
+            <td>{{item.totalExperiance}}</td>
+            
+        </tr>
+    </table>
+</div>
+
+<p *ngIf="exportSuccess!=undefined">{{exportSuccess}}</p>
+
+
+
+
+<!-- <li>{{item.candidateId}}</li>
+<li>{{item.candidateName}}</li>
+<li>{{item.age}}</li>
+<li>{{item.expectedLwd}}</li>
+<li>{{item.location}}</li>
+<li>{{item.maritialStatus}}</li>
+<li>{{item.relevantExperiance}}</li>
+<li>{{item.skills}}</li>
+<li>{{item.technology}}</li>
+<li>{{item.totalExperiance}}</li> -->
+
+
+
+<!-- <th>Candidate Id</th>
+<th>CandidateName</th>
+<th>Age</th>
+<th>Expected Lwd</th>
+<th>Location</th>
+<th>Maritial Status</th>
+<th>Relevant Exp</th>
+<th>Skills</th>
+<th>Technology</th>
+<th>Total Exp</th> -->
