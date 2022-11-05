@@ -1,0 +1,89 @@
+body{
+
+    background-image: linear-gradient( to top,#8bc6fc,#85a1f2);
+    height:110%;
+    width: 100%;
+    
+    
+}
+
+    
+    
+/* button:hover{
+    background-color:#45BEAA ;
+    border:1px solid;
+    color :white;
+} */
+
+h1{
+    color: whitesmoke;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+p:hover{
+    color: #45beaa;
+}
+
+section{
+
+
+    margin-right: 300px;
+}
+
+    
+.hiringcontainer{
+    position:absolute;
+    width:200px;
+    margin-top:30px;
+    margin-left:25px;
+}
+
+    
+
+
+
+    /* .container,#img{
+        border:1px solid black;
+    } */
+
+#conl{
+    margin-left:23%;
+}
+
+.row{
+
+    border-radius: 15px;
+}
+
+
+.rounded{
+    border-radius: 25px;
+}
+
+
+
+
+/* a:hover{
+    background-color:#45BEAA ;
+    border:1px solid;
+    color :white;
+} */
+
+
+
+.radius{
+    border-radius: 70%;
+}
+
+
+#logo{
+    height:60px;
+    width:270px;
+    padding:10px;
+    margin-bottom:7px;
+    padding:none;
+    margin:0px 0px 0px 0px;
+    /* border-color: yellow; */
+    /* border-style: solid; */
+  }

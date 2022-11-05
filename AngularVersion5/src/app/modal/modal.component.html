@@ -1,0 +1,95 @@
+<body style="padding: 0px;">
+    <div id="modal-content-wrapper " class="d-inline-flex col-lg-11" >
+
+        <div class="col" style="padding: 0px;">
+            <header id="modal-header" class="col-lg-12" style="align-content: initial;">
+                <h5 id="modal-title" class="p-2" style="font-size: 30;">Candidate Info</h5>
+                <!-- <marquee direction="up" height="50px">Candidate Info</marquee> -->
+            </header>
+            <ul class=" col-lg-12 " *ngIf="candidateObj!=undefined">
+                <li>{{candidateObj.candidateId}}</li>
+                <li>{{candidateObj.candidateName}}</li>
+                <li>{{candidateObj.age}}</li>
+                <li>{{candidateObj.expectedLwd}}</li>
+                <li>{{candidateObj.location}}</li>
+                <li>{{candidateObj.maritialStatus}}</li>
+                <li>{{candidateObj.relevantExperiance}}</li>
+                <li>{{candidateObj.skills}}</li>
+                <li>{{candidateObj.technology}}</li>
+                <li>{{candidateObj.totalExperiance}}</li>
+            </ul>
+        </div>
+
+
+
+        <!-- <div class="container">
+            <div class="row d-lg-flex">
+                <h5 class="col-lg-12 mt-5 h-60">Add Attachments</h5>
+                <form class="col-lg-12">
+                    <div class="form-group">
+                        <input  mat-raised-button type="file"  (change)="onImageUpload($event)" class="btn1">
+                        <br><br>
+
+                        <input mat-raised-button  type="button" (click)="imageUploadAction()" value="Upload Image" class="btn1">
+                    </div>
+                    <div>
+                        <output *ngIf=successResponse class="success"><b>{{successResponse}}</b></output>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" id="image" placeholder="Search Image" [(ngModel)]="image" name="image" />
+                        <input type="button" (click)="viewImage()" value="View Image" class="btn1">
+                    </div>
+                    <div *ngIf="dbImage">
+                        <img [src]="dbImage">
+                    </div>
+                </form>
+                <pre></pre>
+                <footer id="modal-footer" class="col-lg-12">
+                    <button mat-raised-button id="modal-close-button" (click)="closeModal()">Close</button>
+                </footer>
+            </div>
+        </div> -->
+        <div class="container col-lg-6" style="max-height: max-content; margin-top: -21px;" >
+            <br>
+            <h5 class="p-2" style="font-size: 30;">Add Attachments</h5>
+            <div>
+            <form #uploadForm="ngForm" >
+                <div class="form-group">
+                    <label for="file">Upload Docs</label>
+                    <input type="file" class="form-control" (change)="onSelectFile($event)" style="height: 30px;">
+                    <br>
+                    <button type="button" class="btn btn-success" (click)="submitImage(uploadForm.value) " style="margin-top: -10px;"  >Submit</button>
+                </div><br>
+            </form>
+        </div>
+        <br>
+
+        
+            <form>
+                <br>
+                <div class="form-group">
+                    <input #txt type="text" placeholder="Comments"  style="border-radius: 10px;"/><br>
+                    <br>
+                     <button class="btn btn-info" (click)="getComment(txt.value)"  style="margin-top: -10px;" >Submit</button>                     
+                </div>
+
+                <div>
+                    <table *ngFor="let item of commentList">
+                        <tr>
+                            <td>{{item.comment}}</td>
+                        </tr>
+                    </table>
+                </div>   
+                <pre></pre>
+                
+                <div class="rg   d-flex justify-content-start">
+                <footer id="modal-footer" class="col-lg-12">
+                <button  mat-raised-button id="modal-close-button" (click)="closeModal()" >
+                 Close</button>
+                </footer> 
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
